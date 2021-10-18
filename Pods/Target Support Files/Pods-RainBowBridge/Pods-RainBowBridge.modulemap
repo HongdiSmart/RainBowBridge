@@ -1,0 +1,6 @@
+module Pods_RainBowBridge {
+  umbrella header "Pods-RainBowBridge-umbrella.h"
+
+  export *
+  module * { export * }
+}

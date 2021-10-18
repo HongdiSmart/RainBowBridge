@@ -1,0 +1,61 @@
+PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - Alamofire (5.4.4)
+  - Bolts-Swift (1.5.0)
+  - Moya (15.0.0):
+    - Moya/Core (= 15.0.0)
+  - Moya/Core (15.0.0):
+    - Alamofire (~> 5.0)
+  - PlayAppStoreSDK (1.0):
+    - AFNetworking (~> 3)
+  - SwiftyJSON (5.0.1)
+
+DEPENDENCIES:
+  - Bolts-Swift (from `https://github.com/BoltsFramework/Bolts-Swift`)
+  - Moya (~> 15.0)
+  - PlayAppStoreSDK (from `./`)
+  - SwiftyJSON
+
+SPEC REPOS:
+  trunk:
+    - AFNetworking
+    - Alamofire
+    - Moya
+    - SwiftyJSON
+
+EXTERNAL SOURCES:
+  Bolts-Swift:
+    :git: https://github.com/BoltsFramework/Bolts-Swift
+  PlayAppStoreSDK:
+    :path: "./"
+
+CHECKOUT OPTIONS:
+  Bolts-Swift:
+    :commit: 24fcb2d57a1df5c4ab8a48a925213b2c0b68dc78
+    :git: https://github.com/BoltsFramework/Bolts-Swift
+
+SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
+  Bolts-Swift: afbbaf8c8186e7f769be4afa656949c14087ba44
+  Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
+  PlayAppStoreSDK: 657cc9fe2f0d9971eb833d866199ad2b8d041ce5
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
+
+PODFILE CHECKSUM: 1da7bc95862cd1dfffcf57b0d564480fe78cd77f
+
+COCOAPODS: 1.11.0

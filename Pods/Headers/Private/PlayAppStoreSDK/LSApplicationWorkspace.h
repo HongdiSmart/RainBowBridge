@@ -1,0 +1,1 @@
+../../../../PlayAppStoreSDK/Application/Private Headers/LSApplicationWorkspace.h
