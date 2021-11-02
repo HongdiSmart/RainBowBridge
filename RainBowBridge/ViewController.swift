@@ -8,14 +8,29 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet var tableView: UITableView!
+    @IBOutlet var tableView: UITableView! {
+        didSet {
+            if #available(iOS 15, *) {
+                tableView.sectionHeaderTopPadding = 0;
+            }
+        }
+    }
 
     var dataArray = [AnyObject]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-
+        let title = "iOS测试包下载工具"
+        if #available(iOS 13.0, *) {
+            self.navigationController?.navigationBar.standardAppearance.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor:  UIColor.black, NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 25)]
+            self.navigationController?.navigationBar.prefersLargeTitles = true
+            self.navigationItem.largeTitleDisplayMode = .always
+            self.navigationItem.title = title
+        } else {
+            // Fallback on earlier versions
+            self.navigationItem.title = title
+        }
         NotificationCenter.default.addObserver(self, selector: #selector(applicationDidBecomeActive(_:)), name: UIApplication.didBecomeActiveNotification, object: nil)
     }
 

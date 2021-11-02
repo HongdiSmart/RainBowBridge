@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sq2-iI-jsA">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <accessibilityOverrides isEnabled="YES"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -19,11 +20,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="EBl-iY-ws6">
-                                <rect key="frame" x="20" y="64" width="335" height="714"/>
+                                <rect key="frame" x="20" y="108" width="335" height="670"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="InfoTableViewCell" rowHeight="100" id="G8b-hR-jN8" customClass="InfoTableViewCell" customModule="RainBowBridge" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="335" height="100"/>
+                                        <rect key="frame" x="0.0" y="50" width="335" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="G8b-hR-jN8" id="VC5-Ha-syB">
                                             <rect key="frame" x="0.0" y="0.0" width="335" height="100"/>
@@ -106,6 +107,7 @@
                                             <constraints>
                                                 <constraint firstItem="dGM-j8-mnd" firstAttribute="centerY" secondItem="VC5-Ha-syB" secondAttribute="centerY" id="CZm-S2-KD1"/>
                                                 <constraint firstAttribute="trailing" secondItem="RTe-11-8fJ" secondAttribute="trailing" id="FaH-et-r5U"/>
+                                                <constraint firstItem="RTe-11-8fJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wLU-P5-Szp" secondAttribute="trailing" constant="8" symbolic="YES" id="GOK-LB-XI4"/>
                                                 <constraint firstItem="RTe-11-8fJ" firstAttribute="centerY" secondItem="VC5-Ha-syB" secondAttribute="centerY" id="Lqm-Q7-8bX"/>
                                                 <constraint firstItem="wLU-P5-Szp" firstAttribute="top" secondItem="VC5-Ha-syB" secondAttribute="top" constant="2" id="Oan-mo-cTg"/>
                                                 <constraint firstItem="dGM-j8-mnd" firstAttribute="leading" secondItem="VC5-Ha-syB" secondAttribute="leading" constant="5" id="Wky-bR-aqm"/>
@@ -140,13 +142,36 @@
                             <constraint firstItem="EBl-iY-ws6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="n9k-RR-zY1"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="sQu-dc-Abk"/>
                     <connections>
                         <outlet property="tableView" destination="EBl-iY-ws6" id="Z85-Ns-ntm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-321.73913043478262" y="81.026785714285708"/>
+            <point key="canvasLocation" x="236" y="259"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="L9i-KE-ZwQ">
+            <objects>
+                <navigationController id="sq2-iI-jsA" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zY7-Ej-00C">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" name="Color"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" systemColor="systemGrayColor"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="CzB-fo-v6L"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wdo-gW-f4V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-760" y="259"/>
         </scene>
     </scenes>
     <resources>
@@ -154,8 +179,14 @@
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="Color">
+            <color red="0.081275202333927155" green="0.080099128186702728" blue="0.12457997351884842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

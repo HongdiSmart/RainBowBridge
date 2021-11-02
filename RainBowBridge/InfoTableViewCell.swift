@@ -41,8 +41,8 @@ class InfoTableViewCell: UITableViewCell {
 
         name.text = model["buildName"] as? String
         identifier.text = model["buildIdentifier"] as? String
-        version.text = model["buildVersion"] as? String
-        buildVersion.text = model["buildBuildVersion"] as? String
+        version.text = "版本号：" + (model["buildVersion"] as? String ?? "")
+        buildVersion.text = "构建号：" + (model["buildBuildVersion"] as? String ?? "")
         time.text = model["buildCreated"] as? String
     }
 

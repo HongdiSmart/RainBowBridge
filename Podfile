@@ -6,7 +6,7 @@ target 'RainBowBridge' do
   #use_frameworks!
 
   # Pods for RainBowBridge
-  pod 'PlayAppStoreSDK', :path => './'
+#  pod 'PlayAppStoreSDK', :path => './'
   pod 'Moya', '~> 15.0'
   pod 'SwiftyJSON'
 end
